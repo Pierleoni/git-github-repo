@@ -49,7 +49,7 @@
                 N.B. se lavoriamo in un team o più semplicemente vogliamo rendere pubblico il nostro
                 progetto, chiunque scaricherà la repository avrà localmente sulla sua macchina tutte le modifiche
                 apportate fino a quel momento.
-                
+
 
             <div class="info">
                 <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px"
@@ -102,6 +102,48 @@
             Andiamo a spiegare i vari commandi di Git che digiteremo nel temrinale o nella riga di comando del computer.
             <br>(N.B.Tutti questi comandi vanno scritti in minuscolo e non maiuscolo )
             <ol>
+                <li>Per creare una repository per git in locale ci sono 2 modi:
+                    <ul type="A">
+                        <br>
+                        <li>tasto destro del mouse → nuova cartella (o ctrl+ shift+N)</li>
+                        <li>oppure tramite il terminale di git ( per aprirlo tasto destro del mouse → git bash) →
+                            digitare,
+                            sulla riga di comando del terminale, mkdir + il nome della directory che si vuole creare.
+                        </li>
+                    </ul>
+                </li>
+                <li> ls -a:
+                    <br>è il comando che mostra la lista dei file contenuto dentro le directory. Il parametro -a
+                    serve per
+                    andare ad inserire dentro la lista anche eventuali file nascosti
+                </li>
+                <li>clear:
+                    <br>serve per pulire la nostra command lines per ripartire con una finestra pulita del terminale
+                    Bash.
+                </li>
+                <li>git init:
+                    <br>questo comando serve per inizializzare git. In pratica crea una sotto directory, dentro la
+                    nostra directory principale, nominandola .git. Se abbiamo la visualizzazione dei file e cartelle
+                    nascosti non abilita non visuelizzeremo neanche questa directory, per abilitare questa funzione
+                    aprire il media explore → tab visualizza → sezione mostra/nascondi → spuntare la casella "elementi
+                    nascosti".
+                </li>
+                <div class="info">
+                    <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="">
+                    <img src="/Media/Photo/puntoesclamativo.jpg" height="40px" width="50px" alt="">
+                    <h2>La cartella .git</h2>
+                    <p>In questa cartella è contenuto tutta la history dei nostri salvataggi effetuati durante lo
+                        sviluppo del progetto, se mai volessimo ripartire da zero basta solo cancellare la cartella .git
+                        N.B. Rara procedura, meglio evitare
+                        Se apriamo questa directory possiamo notare come al suo interno si trovino delle sub-directory e
+                        dei file, tutto questo serve a git per creare la timeline con tutti i vari salvataggi </p>
+                </div>
+                <li>
+                    touch + "nome file".txt: questo comando crea un file di testo 
+                </li>
+                <li>
+                    echo + le parole che voglio aggiungere > "nome file": creo un file nel frattempo che aggiungo contenuto.
+                </li>
                 <li>Clone:
                     <br>i cloni sono, ad esempio, le repository che non si trovano localmente sul pc ma su Github e,
                     tramite questo comando, vengono clonate per essere poi installate sul tuo host.
