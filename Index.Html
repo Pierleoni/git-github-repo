@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
     <title>Git & GitHub</title>
 </head>
 
@@ -14,18 +15,43 @@
             <header>
                 <h2>Che cos'è Git?</h2>
             </header>
-            <p>Git è una versione di controllo del sistema <mark>free e open source</mark>
-                Per <ins>versione di controllo</ins> si intende:
+            <p>Git è una controllo di versione di sistema (Version control system/VCS) <mark>free e open source</mark>
+                Per <ins>controllo di versione</ins> si intende:
                 <br> la gestione di modifiche ai documenti, programmi del computer, grossi siti web e altre raccolte di
                 informazioni.
+                <br><mark>Quindi è un sistema che registra, nel tempo i cambiamenti ad un file o ad una serie di
+                    file, cosi da poter richiamare una specifica versione in un secondo momento.</mark>
+
+                <br>Mentre un VCS ti permette di ripristinare i file ad una versione precedente, ripristinare l'intero
+                progetto a uno stato precedente, revisonare le modifiche nel tempo , vedere i cambiamenti fatti da
+                terzi, chi ha introdotto un problema e quando e molto altro ancora.
+                <br>Usare un VCS, in generale, significa anche che se fai un pasticcio, ad esemepio,
+                perdere/cancellare/eliminare qualche file puoi facilemente recuperalo senza faticare troppo.
                 <br>Quindi in sostanza i programmmatori tengono traccia delle modifiche del loro codice; salvano una
                 versione iniziale di esso in git, poi quando lo aggiornano lo salvano sempre in git e questa operazione
                 viene ripetuta sempre più volte(potenzialmente fino all'infinito).
                 Questi salvattaggi non sono solo utili per salvare le modifiche ma permettono di ri-tornare suoi propri
                 passi per vedere i vari passaggi, questo ci aiuta a capire e vedere cosa abbiamo fatto.
-                <br>Tutto ciò puo essere utile quando dobbiamo rintracciare dei bug o per tornare a una versione
+                <br>Tutto ciò puo essere utile anche quando dobbiamo rintracciare dei bug o per tornare a una versione
                 precedente del codice.
-            <div class="Info+">
+                <br>Esistono diversi software che permettono di utillizare il controllo di versione, quello più usato è
+                Git.
+                Essendo un sistema di controllo distribuito ci permette di lavorare ai vari progetti anche senza avere
+                una connessione internet, questo perchè all'interno della nostra repository locale abbiamo tutti le
+                modifiche fatte da noi stessi o da altre persone.
+                <br>
+                <img src="/Media/Photo/CV distribuito.png" height="500px" width="400px"
+                    alt="Controllo di Versione Distribuito" title="Controllo di Versione Distribuito">
+                <br>Questo sistema è molto più conveniente rispetto ad un sistema centralizato, dove bisogna avere un
+                server centrale nel quale salvare tutte queste informazioni.
+                <img src="/Media/Photo/Central CVS.jpg" height="500px" width="400px" alt="Sistema Centralizato"
+                    title="Sistema Centralizato">
+                N.B. se lavoriamo in un team o più semplicemente vogliamo rendere pubblico il nostro
+                progetto, chiunque scaricherà la repository avrà localmente sulla sua macchina tutte le modifiche
+                apportate fino a quel momento.
+                
+
+            <div class="info">
                 <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px"
                     alt="lente di ingrandimento">
                 <h2>Termini tecnici</h2>
@@ -91,7 +117,7 @@
                 <li>push:
                     <br>carica i commit di Git in una repository remota, come Github
                 </li>
-                <div class="info+">
+                <div class="info">
                     <img src="/Media/Photo/puntoesclamativo.jpg" height="40px" width="50px" alt="">
                     <h2>Facciamo il punto </h2>
                     <p>Una volta aver apportato le modifiche localmente diciamo a git di monitorarle tramite il comando
@@ -164,7 +190,7 @@
                 senza alcun significato, ma deve esserci sempre il messaggio!!!
                 Questo perche indica cosa hai aggiunto e perchè; questo è solo il titolo del messaggio se ci volessi
                 aggiungere una descrizione dovrei aggiungere un ulteriore -m "" e scrivere tra le virgolette una
-                descrizione
+                descrizione.
 
                 </p>
             </div>
