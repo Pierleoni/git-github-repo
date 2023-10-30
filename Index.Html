@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ita">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & GitHub</title>
+</head>
+
+<body>
+    <div id="bordo">
+        <h1>Git</h1>
+        <div class="ph">
+            <header>
+                <h2>Che cos'è Git?</h2>
+            </header>
+            <p>Git è una versione di controllo del sistema <mark>free e open source</mark>
+                Per <ins>versione di controllo</ins> si intende:
+                <br> la gestione di modifiche ai documenti, programmi del computer, grossi siti web e altre raccolte di
+                informazioni.
+                <br>Quindi in sostanza i programmmatori tengono traccia delle modifiche del loro codice; salvano una
+                versione iniziale di esso in git, poi quando lo aggiornano lo salvano sempre in git e questa operazione
+                viene ripetuta sempre più volte(potenzialmente fino all'infinito).
+                Questi salvattaggi non sono solo utili per salvare le modifiche ma permettono di ri-tornare suoi propri
+                passi per vedere i vari passaggi, questo ci aiuta a capire e vedere cosa abbiamo fatto.
+                <br>Tutto ciò puo essere utile quando dobbiamo rintracciare dei bug o per tornare a una versione
+                precedente del codice.
+            <div class="Info+">
+                <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px"
+                    alt="lente di ingrandimento">
+                <h2>Termini tecnici</h2>
+                <ul>
+                    <li>Directory → Folder</li>
+                    <li>Terminal o Command Line(Linea di comando) → Interface for Text Commands(Interafaccia per i
+                        comandi di testo):
+                        <br>
+                        in parole povere è un'applicazione che viene eseguita sul tuo computer che è semplicemente
+                        un'interfaccia in cui si può digitare i comandi di testo. In pratica si può navigare tra file e
+                        cartelle, creare file, modificare ed aggiornare quello che vuoi, installare ed eseguire
+                        programmi, etc.
+                    </li>
+                    <li>CLI → Command Line Interface (Interfaccia della linea di comando):
+                        <br>
+                        è l'interfaccia delle riga di comando. Molti programmi che installi, in quanto programmmatore ti
+                        chiederanno di interagire tramite comandi di testo nella riga di comando; in pratica digiti il
+                        testo e premi invio invece di fare doppio clik sull'icona di una cartella sul desktop.
+                        Quindi bisogna pensarlo come un altro modo di eseguire un programma
+                    </li>
+                    <li>CD → Change Directory:
+                        <br>
+                        In parole povere è un commando che ti permette di spostare tra le directory sia principali che
+                        non, una volta dato questo comando devi dare anche le indicazioni per raggiungere qualsiasi
+                        directory del tuo sistema.
+                    </li>
+                    <li>Code Editor → Word Processor for Writing Code:
+                        <br>è un editor di codice (es: Visual studio Code)
+                    </li>
+                    <li>Repository → Progetto o cartella/posto dove il progetto è conservato:
+                        <br>
+                        la parola repository ha molteplici significati, nel mondo della programmazione di solito viene
+                        usata per indicare una repository git.
+                    </li>
+                    <li>Github:
+                        <br>
+                        è un sito web in cui ospiti tutti i tuoi repository git.
+                        <br>Il fatto che sia online ti permette di lavorare in gruppo con altre persone e organizzare i
+                        tuoi progetti in un portfolio da mostrare ai potenziali datori di lavoro.
+                    </li>
+                    <li>Git:
+                        <br>
+                        è lo strumento che tiene traccia delle modifiche apportate al tuo codice nel tempo
+                    </li>
+                </ul>
+            </div>
+            <h2>Git Commands</h2>
+            Andiamo a spiegare i vari commandi di Git che digiteremo nel temrinale o nella riga di comando del computer.
+            <br>(N.B.Tutti questi comandi vanno scritti in minuscolo e non maiuscolo )
+            <ol>
+                <li>Clone:
+                    <br>i cloni sono, ad esempio, le repository che non si trovano localmente sul pc ma su Github e,
+                    tramite questo comando, vengono clonate per essere poi installate sul tuo host.
+                </li>
+                <li>add:
+                    traccia i tuoi file e li cambia in Git.
+                    <br>Questo comando è utile per quando devi cancellare i file localmente e vuoi che anche Git tracci
+                    queste modifiche.
+                </li>
+                <li>commit:
+                    <br>Salva i tuoi file in Git(difatti si dice commit changes)
+                </li>
+                <li>push:
+                    <br>carica i commit di Git in una repository remota, come Github
+                </li>
+                <div class="info+">
+                    <img src="/Media/Photo/puntoesclamativo.jpg" height="40px" width="50px" alt="">
+                    <h2>Facciamo il punto </h2>
+                    <p>Una volta aver apportato le modifiche localmente diciamo a git di monitorarle tramite il comando
+                        add, dopodichè salvi il/i file tramite il comando commit, infine bisogna caricare questi file in
+                        una repository remota (GitHub, Bitbucket, get lab,etc.) e lo si fa tramite il comando push.
+                    </p>
+                </div>
+                <li>pull:
+                    <br>è l'opposto di push; scarica le modifiche dalla repository remota al host.
+                </li>
+            </ol>
+            Andiamo a vedere nello specifico come applicare questi comandi su Github:
+            <br>Prima di tutto bisogna registrarsi al sito, dopodichè si accede al tuo profilo e per creare una
+            repository ci sono 2 modi:
+            <ol>
+                <li>cliccare sull'icona del gatto in alto a sinistra che ti porta alla pagina di dashboard → sempre
+                    sulla sinistra si trova un pulsante verde con scritto new → cliccandoci sopra ti pota alla pagina
+                    per creare una repository. </li>
+                <li>In alto a destra, dopo la navbar, si trova un'icona con il piu → cliccandoci sopra si apre una
+                    tendina di pop-up dove la prima voce è "New Repository". </li>
+            </ol>
+            Quindi la repository in sostanza è un progetto che contiene tutti i file e cartelle di codifica di qualsiasi
+            progetto tu stia costruendo.
+            <br>una volta creata la repository tutto i file e documenti che sono nel host possono essere spostati nella
+            repository appena creata oppure posso crearli online direttamente sul sito di GitHub.
+            </p>
+        </div>
+        <div class="ph">
+            <h2>Creare file di Markdown su GitHub</h2>
+            <p>
+                Per creare un file di markdown online su git hub bisogna andare sull link "creating new file" che si
+                trova nel riquadro "Quick Setup - if you've done this kind of thing before", proprio sotto questo
+                titolo.
+                <br>N.B. Tutta questa operazione la si fa una volta creata la nuova repository, poichè dopo aver
+                cliccato
+                su create nella pagina dedicata per creare una repository, vieni trasferito alla seguente pagina.
+                Una volta creato lo andro a nominare dopodiche posso scriverci sopra (l'intestazione la si richiama con
+                l'hastag).
+                <br>Per salvare il file cliccare in alto a destra il tasto "commit new file"→ una volta cliccato
+                apparirà
+                una finestra dove in alto c'è una casella nella quale se non si scrive nulla userà il testo segnaposto
+                per nominare il file.
+            </p>
+            <div class="ph">
+                <h2>Clone, add, commit e push da Visual Studio Code a una Repo Git</h2>
+                <h3>Clone Git File</h3>
+                <p>Tramite questo Code Editor posso accedere a un terminale interno tramite il menù Terminal → New
+                    Terminal (Ctrl + shift + ò).
+                    <br>per clonare ed estrare una repository da github:
+                    <br>bisogna rimanare sul terminale locale (in
+                    questo caso su powershell) → menù file → open folder → dopodiche su terminale ci troveremo scritto
+                    (PS C:\Users\user\Documents\Programmazione\Git & GitHub\demo clone>) → digitare git clone → andare
+                    su git hub all'interno della repository → andare su code > tab clone e copiare l'indirizzo che
+                    trovate → tornate sul terminale di visual studio code → incollate l'indirizzo → premete invio → e
+                    cosi il file viene estratto da github sul vostro computer.
+                    <!-- Nota: Gwen anzichè copiare l'indirizzo http ha copiato l'indirizzo SSH. Perchè? -->
+                    <br>
+                <h3>Git Add </h3>
+                Git Add è il comando che ti permette di aggiungere un file alla repository Git.
+                <br>Molte persone scrivino nella riga di commando git add .: il punto in questo caso va a significare
+                che stai dicendo a Git di tenere traccia di tutti i file elencati, ma puoi anche indicargli solo i nomi
+                di ogni singolo file o cartella (es: git add index.html) in questo modo git traccerà solo quel file o
+                directory.
+                <h3>Git Commit -m</h3>
+                dopo aver fatto il git add dobbiamo salvare i salvattaggi:
+                <br>nella riga di commando del terminale scrivere git commit -m; questo ultimo comando è per il
+                messaggio e devi un messaggio per poter committare i tuoi file.
+                Quindi: git commit -m "added index.html file" ad esempio, il messaggio potrebbe contenere anche solo un
+                carattere
+                senza alcun significato, ma deve esserci sempre il messaggio!!!
+                Questo perche indica cosa hai aggiunto e perchè; questo è solo il titolo del messaggio se ci volessi
+                aggiungere una descrizione dovrei aggiungere un ulteriore -m "" e scrivere tra le virgolette una
+                descrizione
+
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
