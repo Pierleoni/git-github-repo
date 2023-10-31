@@ -44,9 +44,9 @@
                     alt="Controllo di Versione Distribuito" title="Controllo di Versione Distribuito">
                 <br>Questo sistema è molto più conveniente rispetto ad un sistema centralizato, dove bisogna avere un
                 server centrale nel quale salvare tutte queste informazioni.
-                <img src="/Media/Photo/Central CVS.jpg" height="500px" width="400px" alt="Sistema Centralizato"
+                <img src="/Media/Photo/Central CVS.jpg" height="350px" width="290px" alt="Sistema Centralizato"
                     title="Sistema Centralizato">
-                N.B. se lavoriamo in un team o più semplicemente vogliamo rendere pubblico il nostro
+                <br>N.B. se lavoriamo in un team o più semplicemente vogliamo rendere pubblico il nostro
                 progetto, chiunque scaricherà la repository avrà localmente sulla sua macchina tutte le modifiche
                 apportate fino a quel momento.
 
@@ -117,6 +117,10 @@
                     serve per
                     andare ad inserire dentro la lista anche eventuali file nascosti
                 </li>
+                <li>Clone:
+                    <br>i cloni sono, ad esempio, le repository che non si trovano localmente sul pc ma su Github e,
+                    tramite questo comando, vengono clonate per essere poi installate sul tuo host.
+                </li>
                 <li>clear:
                     <br>serve per pulire la nostra command lines per ripartire con una finestra pulita del terminale
                     Bash.
@@ -139,23 +143,80 @@
                         dei file, tutto questo serve a git per creare la timeline con tutti i vari salvataggi </p>
                 </div>
                 <li>
-                    touch + "nome file".txt: questo comando crea un file di testo 
+                    touch + "nome file".txt:
+                    <br>questo comando crea un file di testo
                 </li>
                 <li>
-                    echo + le parole che voglio aggiungere > "nome file": creo un file nel frattempo che aggiungo contenuto.
+                    echo + le parole che voglio aggiungere > "nome file".txt:
+                    <br>creo un file nel frattempo che aggiungo contenuto.
                 </li>
-                <li>Clone:
-                    <br>i cloni sono, ad esempio, le repository che non si trovano localmente sul pc ma su Github e,
-                    tramite questo comando, vengono clonate per essere poi installate sul tuo host.
+                <li>
+                    cat +"nomefile".txt :
+                    <br>questo comando mostra il contenuto del file di testo
                 </li>
-                <li>add:
+                A questo punto abbiamo aggiunto un file, ma Git ancora che abbiamo aggiunto questo file nella working
+                directory e per verificarlo
+                <li>
+                    git status:
+                    <br>questo commando serve per mostrare l'attuale stato dei file all'interno del nostro progetto
+                    <br><img src="/Media/Photo/Git Status.png" alt="Caratteristiche del comando Git status "
+                        title="Caratteristiche del comando Git stauts">
+                </li>
+                <br>Esaminando questa foto possiamo vedere che ci troviamo nel <a href="">branch</a> master, non sono
+                stati ancora aggiunti commits ed il file in rosso vuole dire non è stato ancora aggiunto allo staging o
+                all'index di Git.
+                Inoltre nelle ultime due righe di commando ci dice pure come aggiungere questo file all'index di Git
+                tramite al commando git add.
+                <li>git add:
                     traccia i tuoi file e li cambia in Git.
                     <br>Questo comando è utile per quando devi cancellare i file localmente e vuoi che anche Git tracci
                     queste modifiche.
+                    <br> Se scriviamo git add .; il punto siginifica che vogliamo aggiungere tutti i file
+                    indiscriminatamente.
+                    <br>Se voglio invece aggiungere solo alcuni file o un file specifico devo scrivere solo il/i nome/i
+                    del/i file.
+                    <br>Se voglio aggiungere un set di file (ad esempio solo i file .txt) devo scrivere
+                    *.txt/*.CSS/etc.; l'asterisco sta ad indicare che vado ad aggiungere qualsiasi file con quella
+                    estensione.
+                    <br>
+                    <img src="/Media/Photo/Git Add.png" alt="Caratteristiche del comando git add"
+                        title="Caratteristiche del comando git add">
                 </li>
-                <li>commit:
-                    <br>Salva i tuoi file in Git(difatti si dice commit changes)
+                Come possiamo notare dall'immagine ora il file è colorato di verde e mi conferma che è stato aggiunto
+                all'index di Git, ma non è stato ancora effettuato nessun commit e mi da una indicazione che mi dice che
+                ci sono alcuni cambiamenti che possono essere commitati.
+                <li>git commit:
+                    <br>Salva i tuoi file in Git(difatti si dice commit changes).
+                    <br> Se si usa il commando Git commit senza digitare nient'altro si apre l'editor impostato di
+                    default dal nostro sistema operativo all'interno della Shell (a seconda del sistema operativo può
+                    essere VIM o Vema).
+                    <br>N.B. è possibile impostare un altro editor di default, per usare l'editor di default bisogna
+                    usare i comandi da tastiera
                 </li>
+                <div class="info">
+                    <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="">
+                    <h2>Commandi da tastiera per l'editor di default</h2>
+                    <p>
+                        i: per aggiungere del testo per descrivere la nostra commit.
+                        <br>Il testo verra inserito nella riga in alto, e tutto questo testo che è preceduto prima del
+                        cancelletto si chiama "commento" e non verrà considerato da Git.
+                        <br> <img src="/Media/Photo/command i.png" alt="">
+                        <br>Una volta inserito il commento andiamo a premere il tasto esc:
+                        <br>ci fa uscire dalla modalità scrittura.
+                        <br>dopodichè digitiamo i tasti :wq, per semplificarci la vita sul terminale bash accanto al
+                        commando git commit mettiamo lo spazio e digitiamo -m "" e tra le virgolette mettiamo il
+                        commento che vogliamo aggiungere.
+                    </p>
+                </div>
+                Il testo che mettiamo tra viroglette è obbligatorio, inoltre se fosse la nostra prima commit può anche
+                andare bene scrivere "first commit" mentre dalle commit successive e bene indicare con più precisione lo
+                scopo di quella commit. Questo va fatto anche nell'ottica che se dovessi mai andare a ricecare nella
+                repository le varie commit antecedenti mi sarà più facile ritrovare quella/e che mi servono risparmiando
+                tempo e senza fare troppa fatica.
+                Per fare ciò potrei pensare di utilizzare la seconda parte del messaggio che diventerà la mia
+                descrizione.
+                <br>N.B. committate abbastanza spesso, ma senza svilluppare un DOC per la commit, tuttavia più commit si
+                fanno più ci è facile tornare indietro nel tempo in punti più precisi poichè l'ideale sarebbe avere più salvattaggi per andare avanti o indietro fra i vari commit.
                 <li>push:
                     <br>carica i commit di Git in una repository remota, come Github
                 </li>
