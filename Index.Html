@@ -159,8 +159,8 @@
                 <li>
                     git status:
                     <br>questo commando serve per mostrare l'attuale stato dei file all'interno del nostro progetto
-                    <br><img src="/Media/Photo/Git Status.png" alt="Caratteristiche del comando Git status "
-                        title="Caratteristiche del comando Git stauts">
+                    <br><img src="/Media/Photo/Git Status.png" height="50%" width="40%"
+                        alt="Caratteristiche del comando Git status " title="Caratteristiche del comando Git stauts">
                 </li>
                 <br>Esaminando questa foto possiamo vedere che ci troviamo nel <a href="">branch</a> master, non sono
                 stati ancora aggiunti commits ed il file in rosso vuole dire non è stato ancora aggiunto allo staging o
@@ -179,8 +179,8 @@
                     *.txt/*.CSS/etc.; l'asterisco sta ad indicare che vado ad aggiungere qualsiasi file con quella
                     estensione.
                     <br>
-                    <img src="/Media/Photo/Git Add.png" alt="Caratteristiche del comando git add"
-                        title="Caratteristiche del comando git add">
+                    <img src="/Media/Photo/Git Add.png" height="50%" width="40%"
+                        alt="Caratteristiche del comando git add" title="Caratteristiche del comando git add">
                 </li>
                 Come possiamo notare dall'immagine ora il file è colorato di verde e mi conferma che è stato aggiunto
                 all'index di Git, ma non è stato ancora effettuato nessun commit e mi da una indicazione che mi dice che
@@ -200,7 +200,7 @@
                         i: per aggiungere del testo per descrivere la nostra commit.
                         <br>Il testo verra inserito nella riga in alto, e tutto questo testo che è preceduto prima del
                         cancelletto si chiama "commento" e non verrà considerato da Git.
-                        <br> <img src="/Media/Photo/command i.png" alt="">
+                        <br> <img src="/Media/Photo/command i.png" height="40%" width="39%" alt="">
                         <br>Una volta inserito il commento andiamo a premere il tasto esc:
                         <br>ci fa uscire dalla modalità scrittura.
                         <br>dopodichè digitiamo i tasti :wq, per semplificarci la vita sul terminale bash accanto al
@@ -216,7 +216,45 @@
                 Per fare ciò potrei pensare di utilizzare la seconda parte del messaggio che diventerà la mia
                 descrizione.
                 <br>N.B. committate abbastanza spesso, ma senza svilluppare un DOC per la commit, tuttavia più commit si
-                fanno più ci è facile tornare indietro nel tempo in punti più precisi poichè l'ideale sarebbe avere più salvattaggi per andare avanti o indietro fra i vari commit.
+                fanno più ci è facile tornare indietro nel tempo in punti più precisi poichè l'ideale sarebbe avere più
+                salvattaggi per andare avanti o indietro fra i vari commit.
+                <br> Se dopo la commit digitassimo git status potremmo vedere che la nostra directory è sgombra, non c'è
+                nulla da aggiungere, e non ci sono commit da eseguire.
+                <div class="info">
+                    <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="">
+                    <h2>Come funzionano le commit in git</h2>
+                    <p>
+                        <img src="/Media/Photo/Schema commit.png" height="40%" width="30%" alt="Schema commit">
+                        <br>Seguendo questo schema cercheremo di capire meglio il meccanismo di quello che abbiamo fatto
+                        fino ad adesso usando i comandi git add e git commit:
+                        <br>partendo dal basso verso l'alto, vediamo la working directory dove sono contentuti i nostri
+                        file/subdirectory che, tramite il comando git add, vengono messi [n.d.r. per usare un tecnicismo
+                        si dice in cash ] nella staging area o index di git. Questi file/subdirectory non sono state
+                        ancora commitate ma sono state messe in una zona temporanea la quale serve per mettere insieme
+                        questi file ed subdirectory che poi andremo a salvare con la commit.
+                        <br>La Staging Area quindi non è altro che questa zona temporanea nella quale vengono riposti
+                        questi file che poi andremo a salvare.
+                        <br> Quando invece commitiamo andiamo a creare una istantanea o "fotografia" dello stato
+                        auttuale del codice dei nostri file, che volendo, come già detto prima, possiamo riutilizzare in
+                        futuro nel caso dovessimo tornare indietro nel caso dovessimo fare delle modifiche.
+                        <br> [ n.d.r. Ovviamente possiamo sia andare in una direzione che in un altra, cioè posso sia
+                        aggiungere dalla working directory
+                        dei file all'index sia rimuoverli come posso anche sia commitarli che rimuovere le commit
+                        effetuate.]
+                        <br>Quindi <mark>le
+                            varie commit effetuate vanno a formare la history del nostro progetto. </mark>
+                        <br>
+                        <img src="/Media/Photo/Schema Commit2.png" height="40%" width="30%" alt="Schema Commit 2">
+                    </p>
+                </div>
+                Ora che sappiamo come creare dei file, aggiungerli all'index e commitarli andiamo a vedere come fare i
+                passaggi inversi:
+                <li>git restore --staged + "nome file"(git --rm cached "nome file"):
+                    <br> questo comando permette di eliminare il file che si trova nell'index e di riportarlo nella
+                    working directory
+                    <!-- approfondire la questione e capire perchè non mi funziona tuttavia da notare come a OOdeveloper una volta fatto il git status 
+                    gli consiglia di usare questo comando per togliere questo file dall'index, mentre a me consiglia git rm --cached <file>   -->
+                </li>
                 <li>push:
                     <br>carica i commit di Git in una repository remota, come Github
                 </li>
