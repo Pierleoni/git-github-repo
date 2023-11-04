@@ -249,11 +249,99 @@
                 </div>
                 Ora che sappiamo come creare dei file, aggiungerli all'index e commitarli andiamo a vedere come fare i
                 passaggi inversi:
-                <li>git restore --staged + "nome file"(git --rm cached "nome file"):
-                    <br> questo comando permette di eliminare il file che si trova nell'index e di riportarlo nella
-                    working directory
+                <li>
+                    git --rm cached "nome":
+                    <br>questo commando rimuove la copia del file dall'Index/Staging Area ripotandola nella working
+                    directory, senza toccare però la copia
+                    della working tree.
+                    <br>Di conseguenza nella nuova commit effettuata mancherà il file indicato in questo commando;
+                    quindi se nella commit corrente il file è presente, nella nuova commit mancherà quel determinato
+                    file.
+                </li>
+                <li>git restore --staged + "nome file":
+                    <br> questo comando copia il file dal HEAD commitati dentro l'indice, senza toccare la copia del
+                    working tree.
+                    <br>La copia dell'index e quella del HEAD sono matchcciate indipendentemente dal fatto se erano
+                    accopiati prima.
+                    Quindi una nuova commit effettuata avrà la stessa copia del file cosi come c'è l'aveva la commit
+                    corrente
+                    <br>N.B. Questo commando viene spesso confuso con il commando git rm --cached perchè <mark><i>nel
+                            caso in cui nella commit corrente manchi il file, esso avrà l'effetto di rimuovere il file
+                            dall'index.</i></mark> Quindi in questo caso funzionerà come git rm --cached
+                    <br>
+                    <div class="info">
+                        <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="40px" alt="">
+                        <h2>Info Tecniche</h2>
+                        <p>
+                            Può esserti utile sapere che il commando git reset file copia la versione del file presente
+                            nel HEAD nell'Index, esattamente come git restore --staged file.
+                            <br>Tuttavia è bene notare che git restore, a differenza di questa particolare forma di git
+                            reset, può sovrascrivire la copia della working tree di alcuni file, se gli dici di farlo.
+                            Di conseguenza l'opzione --staged, senza l'opzione --worktree, lo indirizza a scrivere solo
+                            all'indice.
+                        </p>
+                    </div>
+                    <br>
+                    <div class="info">
+                        <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="40px" alt="">
+                        <h2>Differenza tra working tree, Index ed Head</h2>
+                        <p>
+                            Working tree (working directory, workspace):
+                            <br>è la workspace locale dove vengono posti i file sorgente che posso editare e
+                            visualizzare
+                            <br>L'Index di Git:
+                            <br>è dove vengono posti i file che vuoi salvare nella repository di Git. Quindi, come visto
+                            prima l'index è una staging area dove i file appena aggiunti vengono posti in attesa che
+                            venga effettuata la commit.
+                            <br>HEAD:
+                            <br>l'HEAD è una reference dell'ultima commit nel branch corrente, possiamo dire che è un
+                            puntantore che punta all'ultima commit effettuata nel branch o ramo in cui ci troviamo in
+                            questo momento(nel mio caso punta al branch main).
+                        </p>
+                        <img src="/Media/Photo/Esempio HEAD.png" alt="Esempio HEAD">
+                    </div>
                     <!-- approfondire la questione e capire perchè non mi funziona tuttavia da notare come a OOdeveloper una volta fatto il git status 
                     gli consiglia di usare questo comando per togliere questo file dall'index, mentre a me consiglia git rm --cached <file>   -->
+                </li>
+                <li>
+                    git log:
+                    <br>Serve per vedere la history list dei commit eseguiti, più altre informazioni(è giusto sapere che
+                    git salva ogni commit effettuata all'interno del suo database in un formato chiave-valore dove la
+                    chiave è la stringa affianco alla scritta commit).
+                    <br>
+                    <div class="info">
+                        <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="40px" alt="">
+                        <h2>Scia 1</h2>
+                        <p>lo scia 1 è una stringa lunga 40 caratteri e serve per generare chiavi univoche che
+                            serviranno per evitare che ci siano conflitti fra le varie Commit.
+                            <br>Questa chiave viene generata prendendo il contenuto dei file su cui noi abbiamo fatto la
+                            commit
+                        </p>
+                    </div>
+                    Per ogni commit ci vengono fornite altre informazioni come l'autore, la data e il testo(cioè il
+                    messaggio; titolo e descrizione) che è stato
+                    aggiunto alla commit.
+                    <br>
+                    <br>
+                    <img src="/Media/Photo/Esempio HEAD.png" alt="">
+                </li>
+                <li>
+                    cat .git/HEAD:
+                    <br>Questo comando serve per verificare, all'interno del file HEAD stesso, su quale branch è puntato
+                    l'HEAD.
+                    <br>
+                    <img src="/Media/Photo/Esempio HEAD.png" alt="">
+                    <br>Possiamo vedere che all'interno del file c'è la referenza a main che a sua volta fa riferimento
+                    all'ultimo commit eseguito su questo branch.
+                </li>
+                Git log accetta varie opzioni tra cui 
+                <li>
+                    git log --oneline:
+                    <br>l'opzioni per compattare il log che viene stampato nella console 
+                    <li>
+                    git log --oneline --reverse:
+                    <br>cambia l'ordine in cui sono stampati i vari commit
+                    </li>
                 </li>
                 <li>push:
                     <br>carica i commit di Git in una repository remota, come Github
