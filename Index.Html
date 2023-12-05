@@ -337,14 +337,17 @@
                 Git log accetta varie opzioni tra cui
                 <li>
                     git log --oneline:
-                    <br>l'opzioni per compattare il log che viene stampato nella console.
+                    <br>l'opzioni per compattare il log che viene stampato nella console. Le varie commit vengono
+                    visualizzate cronologicamente dal basso verso l'alto in ordine ascendente(dalla prima alla ultima
+                    commit effettuata).
                     <br>Quindi utilizzando questa opzione visualizzeremo il log un pò più compatto che ci dara comunque
                     le informazioni necessarie (l'id della commit, branch che stiamo utilizzando e titolo della commit).
-                    Questo torna utile quando abbiamo tante commit e dobbiamo cercarne una in particolare 
+                    Questo torna utile quando abbiamo tante commit e dobbiamo cercarne una in particolare
+                </li>
                 <li>
                     git log --oneline --reverse:
-                    <br>cambia l'ordine in cui sono stampati i vari commit
-                </li>
+                    <br>cambia l'ordine in cui sono stampati i vari commit, vengono visualizzate cronologicamente
+                    dall'alto verso il basso.
                 </li>
                 <li>push:
                     <br>carica i commit di Git in una repository remota, come Github
@@ -423,7 +426,6 @@
                 Questo perche indica cosa hai aggiunto e perchè; questo è solo il titolo del messaggio se ci volessi
                 aggiungere una descrizione dovrei aggiungere un ulteriore -m "" e scrivere tra le virgolette una
                 descrizione.
-
                 </p>
             </div>
         </div>
